@@ -1,0 +1,32 @@
+  .tile.tile-1 .tile-inner {
+    color: #f9f6f2;
+    background: #3fdfff;
+    box-shadow: 0 2px #005fbf }
+  .tile.tile-2 .tile-inner {
+    color: #f9f6f2;
+    background: #ff3f5f;
+    box-shadow: 0 2px #bf001f }
+  .tile.tile-3 .tile-inner {
+    color: #000;
+    background: white;
+    box-shadow: 0 2px gold }
+  .tile.tile-6 .tile-inner {
+    color: #000;
+    background: white;
+    box-shadow: 0 4px gold }
+  .tile.tile-12 .tile-inner {
+    color: #000;
+    background: white;
+    box-shadow: 0 6px gold }
+  .tile.tile-24 .tile-inner {
+    color: #000;
+    background: white;
+    box-shadow: 0 8px gold }
+  .tile.tile-48 .tile-inner {
+    color: #000;
+    background: white;
+    box-shadow: 0 10px gold }
+  .tile.tile-96 .tile-inner {
+    color: #000;
+    background: white;
+    box-shadow: 0 12px gold }
