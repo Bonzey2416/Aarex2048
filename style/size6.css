@@ -483,6 +483,12 @@ hr {
   .tile.tile--16 .tile-inner {
     color: #f9f6f2;
     background: #6395f5; }
+  .tile.tile--32 .tile-inner {
+    color: #f9f6f2;
+    background: #5f7cf6; }
+  .tile.tile--64 .tile-inner {
+    color: #f9f6f2;
+    background: #3b5ef6; }
   .tile.tile-2 .tile-inner {
     background: #eee4da;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
