@@ -3,63 +3,139 @@
 50%  {font-variation-settings: 'wght' 1000, 'GRAD' 1000;}
 100% {font-variation-settings: 'wght' 0, 'GRAD' 400;}
 }
+@keyframes txsdw {
+0%   {text-shadow: 0 -7px 3px rgba(0,0,0,0.3)}
+12%  {text-shadow: 5px -5px 3px rgba(0,0,0,0.3)}
+25%  {text-shadow: 7px 0 3px rgba(0,0,0,0.3)}
+37%  {text-shadow: 5px 5px 3px rgba(0,0,0,0.3)}
+50%  {text-shadow: 0 7px 3px rgba(0,0,0,0.3)}
+62%  {text-shadow: -5px 5px 3px rgba(0,0,0,0.3)}
+75%  {text-shadow: -7px 0 3px rgba(0,0,0,0.3)}
+87%  {text-shadow: -5px -5px 3px rgba(0,0,0,0.3)}
+100% {text-shadow: 0 -7px 3px rgba(0,0,0,0.3)}
+}
+@keyframes myriadw {
+0%   {font-variation-settings: 'wdth' 70, 'wght' 400;}
+50%  {font-variation-settings: 'wdth' 110, 'wght' 400;}
+100% {font-variation-settings: 'wdth' 70, 'wght' 400;}
+}
+@keyframes rotate {
+0%   {transform: rotate(0deg);}
+100% {transform: rotate(360deg);}
+}
+@keyframes acuminsize {
+0%   {font-variation-settings: 'wdth' 100, 'wght' 100; font-size: 50px;}
+50%  {font-variation-settings: 'wdth' 100, 'wght' 900; font-size: 18px;}
+100% {font-variation-settings: 'wdth' 100, 'wght' 100; font-size: 50px;}
+}
 
   .tile.tile-2 .tile-inner {
     color: #f9f6f2;
-    background: #33ccee; 
+    background: #33eecc; 
     font-family: SF Rounded, Clear Sans, Helvetica Neue, Arial, sans-serif;
+    font-variant-numeric: tabular-nums;
     animation-name: SFRwt;
     animation-duration: 5s;
     animation-iteration-count: infinite; 
     animation-timing-function: ease-in-out; }
   .tile.tile-4 .tile-inner {
     color: #f9f6f2;
-    background: #11aacc; }
+    background: #11ccaa;
+    animation-name: txsdw;
+    animation-duration: 4s;
+    animation-iteration-count: infinite; 
+    animation-timing-function: linear; }
   .tile.tile-8 .tile-inner {
     color: #f9f6f2;
-    background: #ee3366; }
+    background: #ff8899;
+    font-family: Myriad Variable Concept, Myriad Set Pro, Clear Sans, Helvetica Neue, Arial, sans-serif;
+    animation-name: myriadw;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out; }
   .tile.tile-16 .tile-inner {
     color: #f9f6f2;
-    background: #dd2255; }
+    background: #ee5577;
+    animation-name: rotate;
+    animation-duration: 4s;
+    animation-iteration-count: infinite; 
+    animation-timing-function: linear;
+}
   .tile.tile-32 .tile-inner {
     color: #f9f6f2;
-    background: #cc1144; }
+    background: #dd3355;
+    font-family: Acumin Variable Pro, Arimo, Clear Sans, Helvetica Neue, Arial, sans-serif;
+    font-variant-numeric: tabular-nums;
+    animation-name: acuminsize;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out;}
   .tile.tile-64 .tile-inner {
     color: #f9f6f2;
-    background: #bb0033; }
+    background: #cc1133;
+    font-family: SF Rounded, Clear Sans, Helvetica Neue, Arial, sans-serif;
+    font-variant-numeric: tabular-nums;
+    animation-name: SFRwt;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out; }
   .tile.tile-128 .tile-inner {
     color: #f9f6f2;
     background: #ffdd00;
-    font-size: 50px; }
+    font-size: 50px;
+    animation-name: txsdw;
+    animation-duration: 4s;
+    animation-iteration-count: infinite; 
+    animation-timing-function: linear;}
     @media screen and (max-width: 520px) {
       .tile.tile-128 .tile-inner {
         font-size: 25px; } }
   .tile.tile-256 .tile-inner {
     color: #f9f6f2;
     background: #ffaa00;
-    font-size: 50px; }
+    font-size: 50px;
+    font-family: Myriad Variable Concept, Myriad Set Pro, Clear Sans, Helvetica Neue, Arial, sans-serif;
+    animation-name: myriadw;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out;}
     @media screen and (max-width: 520px) {
       .tile.tile-256 .tile-inner {
         font-size: 25px; } }
   .tile.tile-512 .tile-inner {
-    background: #ffffbf;
-    font-size: 50px; }
+    color: #f9f6f2;
+    background: #ff7700;
+    font-size: 50px;
+    animation-name: rotate;
+    animation-duration: 4s;
+    animation-iteration-count: infinite; 
+    animation-timing-function: linear;}
     @media screen and (max-width: 520px) {
       .tile.tile-512 .tile-inner {
         font-size: 25px; } }
   .tile.tile-1024 .tile-inner {
     color: #f9f6f2;
-    background: #ffff7f;
-    box-shadow: 0 0 30px 10px rgba(210, 161, 68, 0.25), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
-    font-size: 37px; }
+    background: #8822dd;
+    font-size: 37px;
+    font-family: Acumin Variable Pro, Arimo, Clear Sans, Helvetica Neue, Arial, sans-serif;
+    font-variant-numeric: tabular-nums;
+    animation-name: acuminsize;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out;}
     @media screen and (max-width: 520px) {
       .tile.tile-1024 .tile-inner {
         font-size: 15px; } }
   .tile.tile-2048 .tile-inner {
     color: #f9f6f2;
-    background: #ffff3f;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
-    font-size: 37px; }
+    background: #7711cc;
+    font-size: 37px;
+    font-family: SF Rounded, Clear Sans, Helvetica Neue, Arial, sans-serif;
+    font-variant-numeric: tabular-nums;
+    animation-name: SFRwt;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out;}
     @media screen and (max-width: 520px) {
       .tile.tile-2048 .tile-inner {
         font-size: 15px; } }
