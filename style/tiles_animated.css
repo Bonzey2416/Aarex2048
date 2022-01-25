@@ -7,7 +7,7 @@
   .tile.tile-2 .tile-inner {
     color: #f9f6f2;
     background: #33ccee; 
-    font-family: SF Rounded, Clear Sans, Helvetica Neue, Arial, sans-serif
+    font-family: SF Rounded, Clear Sans, Helvetica Neue, Arial, sans-serif;
     animation-name: SFRwt;
     animation-duration: 5s;
     animation-iteration-count: infinite; 
