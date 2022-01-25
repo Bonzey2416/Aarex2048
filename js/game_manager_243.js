@@ -278,15 +278,14 @@ GameManager.prototype.tileMatchesAvailable = function () {
       tile = this.grid.cellContent({ x: x, y: y });
 
       if (tile) {
-        for (var direction = 0; direction < 4; direction++) {
-          var vector = self.getVector(direction);
-          var cell   = { x: x + vector.x, y: y + vector.y };
-
-          var other  = self.grid.cellContent(cell);
-
-          if (other && other.value === tile.value) {
-            return true; // These two tiles can be merged
-          }
+          var positions = self.findFarthestPosition(cell, vector);
+          var next      = self.grid.cellContent(positions.next);
+	        var pos2 = self.findFarthestPosition({x: cell.x + vector.x, y: cell.y + vector.y}, vector);
+	        var next2     = self.grid.cellContent(pos2.next);
+          // Only one merger per row traversal?
+          if (next && next.value === tile.value && next2 && next2.value === tile.value && !next.mergedFrom && next != next2) {
+		        return true;
+         }
         }
       }
     }
