@@ -14,7 +14,8 @@ body {
 
 .title {
   font-size: 56px;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   font-variation-settings: 'wght' 100, 'wdth' 105;
   text-align: center;
+  font-weight: 400;
 }
