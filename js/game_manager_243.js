@@ -77,19 +77,36 @@ GameManager.prototype.addRandomTile = function () {
 
 // Sends the updated grid to the actuator
 GameManager.prototype.actuate = function () {
-  if (this.scoreManager.get() < this.score) {
-    this.scoreManager.set(this.score);
+  if (this.storageManager.getBestScore() < this.score) {
+     this.storageManager.setBestScore(this.score);
+   }
+
+   // Clear the state when the game is over (game over only, not win)
+   if (this.over) {
+     this.storageManager.clearGameState();
+   } else {
+     this.storageManager.setGameState(this.serialize());
   }
 
   this.actuator.actuate(this.grid, {
     score:      this.score,
     over:       this.over,
     won:        this.won,
-    bestScore:  this.scoreManager.get(),
+    bestScore:  this.storageManager.getBestScore(),
     terminated: this.isGameTerminated()
   });
 
 };
+// Represent the current game as an object
+ GameManager.prototype.serialize = function () {
+   return {
+     grid:        this.grid.serialize(),
+     score:       this.score,
+     over:        this.over,
+     won:         this.won,
+     keepPlaying: this.keepPlaying
+   };
+ };
 
 // Save all tile positions and remove merger info
 GameManager.prototype.prepareTiles = function () {
@@ -163,7 +180,7 @@ GameManager.prototype.move = function (direction) {
           self.score += merged.value;
 
           // The mighty 2048 tile
-          if (merged.value === 243) self.won = true;
+          if (merged.value === Goal) self.won = true;
         }
         
 	 else if (!tile.merged){
