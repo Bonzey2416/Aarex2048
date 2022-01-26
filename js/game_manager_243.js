@@ -157,6 +157,7 @@ GameManager.prototype.move = function (direction) {
           self.grid.removeTile(tile);
           self.grid.removeTile(next);
           self.grid.removeTile(next2);
+	  self.grid.insertTile(merged);
           // Converge the two tiles' positions
           tile.updatePosition(pos2.next);
 	  next.updatePosition(pos2.next);
