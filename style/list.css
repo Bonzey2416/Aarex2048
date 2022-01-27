@@ -20,7 +20,7 @@ body {
   font-weight: 400;
   font-variant-numeric: tabular-nums;
   animation-name: weight;
-  animation-duration: 2s;
+  animation-duration: 9s;
 }
 
 @keyframes weight {
