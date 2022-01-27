@@ -14,8 +14,16 @@ body {
 
 .title {
   font-size: 56px;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   font-variation-settings: 'wght' 100, 'wdth' 105;
   text-align: center;
   font-weight: 400;
+  font-variant-numeric: tabular-nums;
+  animation-name: weight;
+  animation-duration: 2s;
+}
+
+@keyframes weight {
+  0%   {font-variation-settings: 'wght' 900, 'wdth' 105; color: #eee;}
+  100% {font-variation-settings: 'wght' 100, 'wdth' 105; color: #333;}
 }
